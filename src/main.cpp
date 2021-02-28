@@ -1,11 +1,25 @@
 #include <iostream>
 
-#include "duktape.h"
+#include "ProcessQueue.h"
+
+#include "generated/defaultScriptjs.h"
+
+#include <thread>
+
+using namespace DNice;
 
 int main() {
-    std::cout << "Hello!" << std::endl;
+    std::cout << "Running..." << std::endl;
 
-    duk_context* ctx = duk_create_heap_default();
+    ProcessQueue::GlobalQueue.enqueue([](duk_context* ctx) {
+        duk_eval_string(ctx, DEFAULT_SCRIPT_JS);
+    });
+
+    while (true) {
+        if (!ProcessQueue::GlobalQueue.churn()) {
+            std::this_thread::yield();
+        }
+    }
 
     return 0;
 }
