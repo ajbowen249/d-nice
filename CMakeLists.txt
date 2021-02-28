@@ -5,6 +5,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/")
 project(d_nice)
 
 add_executable(d_nice
+    src/DNS.cpp
     src/duk_module_duktape.cpp
     src/duktape.cpp
     src/main.cpp
