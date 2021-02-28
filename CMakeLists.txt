@@ -14,6 +14,7 @@ add_executable(d_nice
     src/main.cpp
     src/OS.cpp
     src/ProcessQueue.cpp
+    src/UDPServer.cpp
 )
 
 target_include_directories(d_nice
