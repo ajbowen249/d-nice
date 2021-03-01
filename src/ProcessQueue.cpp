@@ -2,6 +2,7 @@
 
 #include "Logging.h"
 #include "OS.h"
+#include "UDPServer.h"
 #include "generated/callbackCachejs.h"
 #include "generated/promisejs.h"
 
@@ -21,6 +22,7 @@ namespace DNice {
             duk_eval_string(_duktape, PROMISE_JS);
             registerLoggingApi(_duktape);
             registerOSApi(_duktape);
+            registerUDPServerApi(_duktape);
         }
 
     void ProcessQueue::enqueue(QueueCallback&& func) {

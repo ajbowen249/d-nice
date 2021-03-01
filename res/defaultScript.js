@@ -1,10 +1,4 @@
-println('lol');
+println('Starting up with default script...');
 
-OS.readFile('res\\defaultScript.js')
-    .then(function(fc) {
-        println(fc.toString());
-    })
-    .catch(function(err) {
-        println('got error');
-        println(err);
-    });
+const mainServer = new UDPServer(53);
+mainServer.start();

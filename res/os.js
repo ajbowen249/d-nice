@@ -3,5 +3,5 @@ const OS = {
         return new Promise(function(resolve, reject) {
             os_readFile_native(path, resolve, reject);
         });
-    },
+    }
 };

@@ -13,3 +13,5 @@ void call_async(F&& fun) {
         fun();
     });
 }
+
+constexpr const double MAX_SAFE_INT = 9007199254740991;
