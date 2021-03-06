@@ -98,11 +98,12 @@ namespace DNice {
     }
 
     std::tuple<Question, size_t> parseQuestion(const std::vector<uint8_t>& bytes, size_t start) {
+        Question question;
         auto index = start;
         auto labelResult = parseLabel(bytes, index);
         index = std::get<1>(labelResult);
 
-        Question question;
+        question.label = std::get<0>(labelResult);
 
         question.qtype = (Type)getValue<uint16_t>(bytes, index);
         index += 2;
