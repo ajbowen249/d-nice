@@ -8,8 +8,7 @@ project(d_nice)
 
 add_executable(d_nice
     src/DNS.cpp
-    src/duk_module_duktape.cpp
-    src/duktape.cpp
+    src/duktape.c
     src/Logging.cpp
     src/main.cpp
     src/OS.cpp

@@ -92,6 +92,6 @@ endfunction()
 
 bin2h(SOURCE_FILE "../res/callbackCache.js" HEADER_FILE "inc/generated/callbackCachejs.h" VARIABLE_NAME "CALLBACKCACHE_JS" BIN2H_UNSIGNED FALSE)
 bin2h(SOURCE_FILE "../res/os.js" HEADER_FILE "inc/generated/osjs.h" VARIABLE_NAME "OS_JS" BIN2H_UNSIGNED FALSE)
-bin2h(SOURCE_FILE "../res/promise.js" HEADER_FILE "inc/generated/promisejs.h" VARIABLE_NAME "PROMISE_JS" BIN2H_UNSIGNED FALSE)
+bin2h(SOURCE_FILE "../res/duktape_polyfill/promise.js" HEADER_FILE "inc/generated/promisejs.h" VARIABLE_NAME "PROMISE_JS" BIN2H_UNSIGNED FALSE)
 bin2h(SOURCE_FILE "../res/defaultScript.js" HEADER_FILE "inc/generated/defaultScriptjs.h" VARIABLE_NAME "DEFAULT_SCRIPT_JS" BIN2H_UNSIGNED FALSE)
 bin2h(SOURCE_FILE "../res/udpServer.js" HEADER_FILE "inc/generated/udpServer.h" VARIABLE_NAME "UDP_SERVER_JS" BIN2H_UNSIGNED FALSE)
